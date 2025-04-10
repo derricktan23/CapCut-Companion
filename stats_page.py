@@ -4,7 +4,7 @@ import requests
 from datetime import datetime
 
 # ========== Configuration ==========
-API_URL = "http://127.0.0.1:8080"
+API_URL = "https://capcut-companion-flaskapp.onrender.com"
 ADMIN_THEME = {
     "primaryColor": "#4CAF50",
     "backgroundColor": "#FFFFFF",
