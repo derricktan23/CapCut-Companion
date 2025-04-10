@@ -1,0 +1,14 @@
+Flask
+streamlit
+pandas
+scikit-learn
+nltk
+google-generativeai
+requests
+flask-sqlalchemy
+jwt
+
+Werkzeug
+pypdf
+chromadb
+spacy
