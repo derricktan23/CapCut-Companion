@@ -73,6 +73,7 @@ The **CapCut Companion Backend** is a Flask application that supports the CapCut
 ---
 
 ## **Survey Flow Logic**
+![image](https://github.com/user-attachments/assets/63858ba5-a6c8-4b6b-bac4-c33efa0d4f21)
 
 1. **Question**: Did you enjoy using CapCut?  
 2. **Question**: How likely are you to recommend us?  
@@ -94,5 +95,29 @@ The **CapCut Companion Backend** is a Flask application that supports the CapCut
 2. Create a new branch.
 3. Commit changes and push.
 4. Open a pull request.
+
+---
+
+
+# CapCut Companion Admin Dashboard
+
+The **CapCut Companion Admin Dashboard** helps admins manage customer insights, surveys, RAG documents, and train the chatbot to enhance user experience.
+
+## Key Features
+
+### 1. Survey Results Insights
+- **Analyze Feedback**: Review user ratings (1–5 stars) to gauge satisfaction.
+- **Identify Themes**: Spot common feedback themes like "Ease of Use" and "Performance" for prioritizing improvements.
+- **Access Raw Responses**: Get detailed feedback from individual survey responses.
+
+### 2. RAG Document Management
+- **Upload Documents**: Add FAQs, tutorials, and guides to enrich the chatbot's knowledge base.
+- **View Existing Documents**: Access documents with details like title, type, and upload date.
+
+## Benefits
+
+- **Data-Driven Improvements**: Use survey insights to guide feature enhancements.
+- **Track User Sentiment**: Monitor satisfaction trends over time.
+- **Accurate Chatbot Responses**: Reference trusted sources to reduce repetitive queries and provide up-to-date information.
 
 ---
