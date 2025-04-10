@@ -3,7 +3,7 @@ import requests
 import uuid
 
 # ========== Configuration ==========
-API_URL = "http://127.0.0.1:8080"
+API_URL = "https://capcut-companion-flaskapp.onrender.com"
 CAPCUT_THEME = {
     "primaryColor": "#000000",
     "backgroundColor": "#FFFFFF",
