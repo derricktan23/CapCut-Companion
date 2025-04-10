@@ -86,7 +86,6 @@ def display_chat_message(message: str, is_user: bool = False):
 st.title("🎬 CapCut AI Assistant")
 st.markdown("Flexible editing • Magical AI tools • Team collaboration • Stock assets")
 
-
 # Survey trigger sidebar with feature visuals
 with st.sidebar:
     st.markdown("""
@@ -112,31 +111,18 @@ with st.sidebar:
 
     # Survey trigger button
     if not st.session_state.survey_active:
-        st.markdown("""
-        <div style="text-align: center; margin-bottom: 30px;">
-            <button style="
-                background: #4CAF50;
-                color: white;
-                border: none;
-                padding: 12px 24px;
-                border-radius: 25px;
-                font-size: 16px;
-                cursor: pointer;
-                width: 100%;
-                transition: background 0.3s;
-            " onmouseover="this.style.background='#45a049'" 
-            onmouseout="this.style.background='#4CAF50'">
-                📝 Take Quick Survey (2 mins)
-            </button>
-        </div>
-        """, unsafe_allow_html=True)
+        if st.button("📝 Take Quick Survey (2 mins)", help="Help us improve!", key="survey_trigger"):
+            st.session_state.survey_active = True
+            st.session_state.awaiting_survey_response = True
+            st.session_state.survey_session = str(uuid.uuid4())
+            st.rerun()
 
     # Feature cards
     st.markdown("""
     <div class="feature-card">
         <div class="feature-icon">🎥</div>
         <h3>Smart Trimming</h3>
-        <p>AI-powered scene detection for perfect cuts every time</p>
+        <p>AI-powered scene detection for perfect cuts every time.</p>
     </div>
     """, unsafe_allow_html=True)
 
@@ -144,7 +130,7 @@ with st.sidebar:
     <div class="feature-card">
         <div class="feature-icon">✨</div>
         <h3>Magic Effects</h3>
-        <p>100+ filters and transitions powered by AI</p>
+        <p>100+ filters and transitions powered by AI.</p>
     </div>
     """, unsafe_allow_html=True)
 
@@ -152,7 +138,7 @@ with st.sidebar:
     <div class="feature-card">
         <div class="feature-icon">📈</div>
         <h3>4K Export</h3>
-        <p>Cinema-quality video rendering (Pro feature)</p>
+        <p>Cinema-quality video rendering (Pro feature).</p>
     </div>
     """, unsafe_allow_html=True)
 
@@ -160,7 +146,7 @@ with st.sidebar:
     <div class="feature-card">
         <div class="feature-icon">🤖</div>
         <h3>AI Assistant</h3>
-        <p>24/7 editing help and suggestions</p>
+        <p>24/7 editing help and suggestions.</p>
     </div>
     """, unsafe_allow_html=True)
 
