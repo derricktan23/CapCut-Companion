@@ -1,8 +1,6 @@
+# CapCut Companion Backend
 
-
-# **CapCut Companion Backend**
-
-The **CapCut Companion Backend** is a Flask-based application that powers the CapCut AI Assistant. It provides APIs for chatbot interactions, survey handling, RAG (Retrieval-Augmented Generation) document management, and customer insights. This backend is designed to enhance user experience by integrating AI-driven features for video editing.
+The **CapCut Companion Backend** is a Flask application that supports the CapCut AI Assistant. It provides APIs for chatbot interactions, survey management, document handling, and customer insights.
 
 ---
 
@@ -16,76 +14,85 @@ The **CapCut Companion Backend** is a Flask-based application that powers the Ca
 7. [Contributing](#contributing)
 
 ---
+
+## **Features**
+
+- **Chatbot API**: AI responses for video editing queries using SpaCy and ChromaDB.
+- **Survey Management**: Dynamic surveys with user responses stored for analysis.
+- **RAG Document Management**: Upload and retrieve help documents.
+- **Customer Insights**: Access customer data for analysis.
+
+---
+
 ## **Setup Instructions**
 
-### **Prerequisites**
-1. Python 3.10+
-2. Flask
-3. SQLite database
-4. Google Generative AI API key
+### **Using Conda**
 
-### **Installation**
-1. Clone the repository:
+1. **Install Miniconda or Anaconda**:  
+   - [Download Miniconda](https://docs.conda.io/en/latest/miniconda.html)  
+   - [Download Anaconda](https://www.anaconda.com/products/distribution)
+
+2. **Create a Conda environment**:
    ```bash
-   git clone https://github.com/your-repo/capcut-companion-backend.git
-   cd capcut-companion-backend
+   conda create --name capcut-companion python=3.10
    ```
 
-2. Install dependencies:
+3. **Activate the environment**:
+   ```bash
+   conda activate capcut-companion
+   ```
+
+4. **Install dependencies**:
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Set up the database:
+5. **Set up the database and run the server**:
    ```bash
    python backend.py
    ```
 
-4. Run the server:
-   ```bash
-   python backend.py
-   ```
+---
+
+## **API Endpoints**
+
+- **`/chat` (POST)**: Responds to chat queries.
+- **`/rag-documents` (GET)**: Fetches help documents.
+- **`/survey` (POST)**: Manages survey interactions.
+- **`/survey/results` (GET)**: Retrieves survey results.
+- **`/customer-insights` (GET)**: Fetches customer data.
+
+---
+
+## **Database Models**
+
+- **HelpDocument**: Stores help documents.
+- **SurveyResponse**: Stores survey responses.
+- **CustomerInsight**: Stores customer information.
 
 ---
 
 ## **Survey Flow Logic**
 
-The survey flow dynamically adjusts based on user responses:
-
-1. Question: 📝 Did you enjoy using CapCut today?  
-   - Choices: 👍 or 👎  
-   - Next Step: Recommendation
-
-2. Question: 📝 How likely are you to recommend us to a friend?  
-   - Choices: Likely, Unlikely, Neutral  
-   - Next Step: Feature Usage
-
-3. Question: 📝 Which feature did you use most?  
-   - Choices: Trimming, Effects, Text, Transitions  
-   - Next Step: Improvement
-
-4. Question: 📝 What would you like us to focus on improving?  
-   - Choices: Ease of Use, Performance, Templates, Tutorials  
-   - Next Step: End
+1. **Question**: Did you enjoy using CapCut?  
+2. **Question**: How likely are you to recommend us?  
+3. **Question**: Which feature did you use most?  
+4. **Question**: What should we improve?
 
 ---
 
 ## **Error Handling**
 
-- Logs errors using Python's `logging` module.
-- Returns appropriate status codes (`400`, `500`) with error messages.
+- Logs errors and returns appropriate status codes.
 - Handles missing or invalid input gracefully.
 
 ---
 
 ## **Contributing**
 
-We welcome contributions! To contribute:
-
-1. Fork this repository.
-2. Create a new branch (`feature/my-feature`).
-3. Commit your changes (`git commit -m 'Add my feature'`).
-4. Push to the branch (`git push origin feature/my-feature`).
-5. Open a pull request.
+1. Fork the repository.
+2. Create a new branch.
+3. Commit changes and push.
+4. Open a pull request.
 
 ---
