@@ -1,4 +1,5 @@
 # CapCut Companion Backend
+![image](https://github.com/user-attachments/assets/c41a9b94-b072-4685-9ef1-31f48948440e)
 
 The **CapCut Companion Backend** is a Flask application that supports the CapCut AI Assistant. It provides APIs for chatbot interactions, survey management, document handling, and customer insights.
 
@@ -19,6 +20,8 @@ The **CapCut Companion Backend** is a Flask application that supports the CapCut
 
 - **Chatbot API**: AI responses for video editing queries using SpaCy and ChromaDB.
 - **Survey Management**: Dynamic surveys with user responses stored for analysis.
+![image](https://github.com/user-attachments/assets/dc2694d0-20f4-4339-b9f0-f7f0aa48d025)
+
 - **RAG Document Management**: Upload and retrieve help documents.
 - **Customer Insights**: Access customer data for analysis.
 
@@ -73,8 +76,6 @@ The **CapCut Companion Backend** is a Flask application that supports the CapCut
 ---
 
 ## **Survey Flow Logic**
-![image](https://github.com/user-attachments/assets/63858ba5-a6c8-4b6b-bac4-c33efa0d4f21)
-
 1. **Question**: Did you enjoy using CapCut?  
 2. **Question**: How likely are you to recommend us?  
 3. **Question**: Which feature did you use most?  
@@ -106,11 +107,15 @@ The **CapCut Companion Admin Dashboard** helps admins manage customer insights, 
 ## Key Features
 
 ### 1. Survey Results Insights
+![image](https://github.com/user-attachments/assets/63858ba5-a6c8-4b6b-bac4-c33efa0d4f21)
 - **Analyze Feedback**: Review user ratings (1–5 stars) to gauge satisfaction.
 - **Identify Themes**: Spot common feedback themes like "Ease of Use" and "Performance" for prioritizing improvements.
 - **Access Raw Responses**: Get detailed feedback from individual survey responses.
 
 ### 2. RAG Document Management
+![image](https://github.com/user-attachments/assets/0c5acf0a-35dc-49d9-96c7-cdf96f193673)
+![image](https://github.com/user-attachments/assets/83b1851a-3c40-43d3-b43b-2ced68a64ace)
+
 - **Upload Documents**: Add FAQs, tutorials, and guides to enrich the chatbot's knowledge base.
 - **View Existing Documents**: Access documents with details like title, type, and upload date.
 
